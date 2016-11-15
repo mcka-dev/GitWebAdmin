@@ -33,19 +33,19 @@ repositories[] = '/home/git/repositories' ; Path to your repositories
 links['/home/git/repositories'] = 'http://localhost' ; External links to the repository
 ; links['/home/repositories2'] = 'http://cgit.localhost/git' ; External links to the repository
 ```
+
 ### Set File Permissions
 Make file executable:
-`
+```bash
 sudo chmod +x git-init.sh
 sudo chmod +x git-rm.sh
-`
+```
 
 To ensure correct access rights to the repository, the entire folder `repositories/` should be owned by `www-data` or a user member of `www-data` group.
 
-`
+```bash
 sudo chown -R www-data:www-data /home/git/repositories
-`
-
+```
 
 ## Screenshot
 <a href="https://github.com/mcka-dev/GitWebAdmin/blob/master/doc/Screenshot_Create.png"><img src="https://github.com/mcka-dev/GitWebAdmin/blob/master/doc/Screenshot_Create.png" alt="Git WebAdmin Screenshot Create" title="Git WebAdmin Screenshot Create"></a>
@@ -54,30 +54,31 @@ sudo chown -R www-data:www-data /home/git/repositories
 
 
 ## REST requests:
-`
+```bash
 curl -X POST --data "repo_name=newrepo.git" http://localhost/admin/create
-`
+```
 ```json
 {"status":"success","message":"Initialized empty Git repository in /home/repositories/newrepo.git"}
 ```
 
-`
+```bash
 curl http://localhost/admin/list
-`
-```json
-{"d:\\tmp2":["newrepo.git"]}
 ```
-`
+```json
+{"/home/repositories":["newrepo.git"]}
+```
+
+```bash
 curl -X POST --data "repository=/home/repositories&repo_name=newrepo.git" http://localhost/admin/delete
-`
+```
 ```json
 {"status":"success","message":"Repository successfully deleted!"}
 ```
 
 ## TODO:
 
-* rename/move repo
-* show description
+* Rename/move repo
+* Show description
 
 ## License
 
