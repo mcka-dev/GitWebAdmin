@@ -1,0 +1,25 @@
+{
+  "name": "admin",
+  "homepage": "https://github.com/mcka-dev/GitWebAdmin",
+  "authors": [
+    "Krasutski <info@krasutski.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.0",
+    "bootstrap": "~3.3.0",
+    "modernizr": "~2.8.0",
+    "Slim": "https://github.com/slimphp/Slim.git#2.6.2",
+    "bootstrap-select": "^1.11.2"
+  }
+}
