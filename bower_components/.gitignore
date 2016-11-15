@@ -1,0 +1,24 @@
+# Ignore everything
+*
+
+# bootstrap
+!bootstrap.min.css
+!bootstrap-theme.min.css
+!bootstrap.min.js
+!bootstrap/dist/fonts/**
+
+# bootstrap select
+!bootstrap-select/dist/css/bootstrap-select.css
+!bootstrap-select/dist/js/bootstrap-select.min.js
+
+# jquery
+!jquery.min.js
+
+# modernizr
+!modernizr.js
+
+# Slim
+!Slim/Slim/**
+
+# ...even if they are in subdirectories
+!*/
